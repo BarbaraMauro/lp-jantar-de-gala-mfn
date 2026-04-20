@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5ª Edição do Jantar de Gala MFN | IBREI — 08 de Junho · São Paulo</title>
+  <meta name="description" content="Uma noite exclusiva que reúne grandes lideranças, networking de alto nível e conexões que impulsionam negócios. 08 de junho, São Paulo." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- BARRA DE URGÊNCIA -->
+  <div id="urgency-bar" class="urgency-bar">
+    <div class="urgency-bar__inner container">
+      <span class="urgency-bar__dot" aria-hidden="true"></span>
+      <p><strong>08 de junho · São Paulo · Vagas limitadas.</strong> Lote atual encerra em <em id="seats-bar">30/04</em>.</p>
+      <a href="#inscricao" class="urgency-bar__cta">Reservar assento <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </div>
+
+  <!-- NAVEGAÇÃO -->
+  <header id="navbar" class="navbar scrolled" role="banner">
+    <div class="container navbar__inner">
+      <a href="#hero" class="navbar__brand navbar__brand--text" aria-label="Início MFN IBREI">
+        <span class="navbar__brand-mfn">MFN</span>
+        <span class="navbar__brand-sep">&nbsp;|&nbsp;</span>
+        <span class="navbar__brand-ibrei">IBREI</span>
+      </a>
+      <nav class="navbar__nav" id="main-nav" role="navigation" aria-label="Menu principal">
+        <a href="#sobre">O Evento</a>
+        <a href="#speakers">Speakers</a>
+        <a href="#experiencia">Programação</a>
+        <a href="#patrocinio">Patrocínio</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="navbar__actions">
+        <a href="#inscricao" class="btn btn--gold btn--sm">Garantir Vaga</a>
+        <button class="navbar__burger" id="burger" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="hero" aria-label="Apresentação principal">
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="hero__particles" id="particles" aria-hidden="true"></div>
+    <div class="container hero__content">
+      <!-- Logo de marca em destaque no hero -->
+      <div class="hero__brand-seal" aria-hidden="true">
+        <img src="images/logo-mfn.png" alt="MFN" class="hero__brand-logo" />
+      </div>
+      <div class="hero__eyebrow">
+        <span class="eyebrow-line" aria-hidden="true"></span>
+        5ª Edição &nbsp;·&nbsp; Jantar de Gala &nbsp;·&nbsp; MFN | IBREI
+        <span class="eyebrow-line" aria-hidden="true"></span>
+      </div>
+      <h1 class="hero__headline">
+        O networking mais estratégico<br />
+        <em>para a sua empresa.</em>
+      </h1>
+      <p class="hero__sub">
+        Um ambiente exclusivo e premium que reúne C-Levels, fundadores, investidores e grandes lideranças — seletivo, curado e projetado para gerar conexões e negócios reais.
+      </p>
+      <div class="hero__meta">
+        <div class="hero__meta-item">
+          <i class="fa-regular fa-calendar-days" aria-hidden="true"></i>
+          <div><span>Data</span><strong>08 de Junho de 2026</strong></div>
+        </div>
+        <div class="hero__meta-div" aria-hidden="true"></div>
+        <div class="hero__meta-item">
+          <i class="fa-regular fa-clock" aria-hidden="true"></i>
+          <div><span>Horário</span><strong>19h00 — 22h30</strong></div>
+        </div>
+        <div class="hero__meta-div" aria-hidden="true"></div>
+        <div class="hero__meta-item">
+          <i class="fa-regular fa-building" aria-hidden="true"></i>
+          <div><span>Local</span><strong>São Paulo, SP</strong></div>
+        </div>
+        <div class="hero__meta-div" aria-hidden="true"></div>
+        <div class="hero__meta-item">
+          <i class="fa-regular fa-user-circle" aria-hidden="true"></i>
+          <div><span>Formato</span><strong>Evento fechado · Vagas limitadas</strong></div>
+        </div>
+      </div>
+      <div class="hero__ctas">
+        <a href="#inscricao" class="btn btn--gold btn--xl">
+          Quero garantir minha vaga
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+        <a href="#sobre" class="btn btn--ghost btn--xl">
+          Entender o evento
+          <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div class="countdown" id="countdown" aria-label="Contagem regressiva para o evento">
+        <div class="countdown__unit"><strong id="cd-days">00</strong><span>dias</span></div>
+        <div class="countdown__sep" aria-hidden="true">:</div>
+        <div class="countdown__unit"><strong id="cd-hours">00</strong><span>horas</span></div>
+        <div class="countdown__sep" aria-hidden="true">:</div>
+        <div class="countdown__unit"><strong id="cd-min">00</strong><span>min</span></div>
+        <div class="countdown__sep" aria-hidden="true">:</div>
+        <div class="countdown__unit"><strong id="cd-sec">00</strong><span>seg</span></div>
+      </div>
+    </div>
+    <div class="hero__scroll" aria-hidden="true"><span></span></div>
+  </section>
+
+  <!-- AUTORIDADE - NÚMEROS -->
+  <section class="authority" aria-label="Números de autoridade">
+    <div class="container authority__grid">
+      <div class="auth-stat">
+        <strong data-target="5">0</strong>
+        <span>edições realizadas</span>
+      </div>
+      <div class="auth-div" aria-hidden="true"></div>
+      <div class="auth-stat">
+        <strong data-target="500" data-suffix="+">0</strong>
+        <span>líderes participantes</span>
+      </div>
+      <div class="auth-div" aria-hidden="true"></div>
+      <div class="auth-stat">
+        <strong data-target="98">0</strong>
+        <span>% de aprovação</span>
+      </div>
+      <div class="auth-div" aria-hidden="true"></div>
+      <div class="auth-stat">
+        <strong data-target="100">0</strong>
+        <span>% vagas esgotadas (4ª edição)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE O EVENTO -->
+  <section id="sobre" class="about section" aria-label="Sobre o evento">
+    <div class="container about__grid">
+      <div class="about__text reveal-left">
+        <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>O Evento</div>
+        <h2 class="h2">
+          Não é apenas um jantar.<br />
+          <em>É onde líderes fazem</em><br />
+          os negócios que importam.
+        </h2>
+        <p class="about__lead">O Jantar de Gala MFN | IBREI é a experiência anual de relacionamento estratégico que reúne C-Levels, fundadores, investidores e líderes organizacionais em um ambiente exclusivo, premium e cuidadosamente curado — onde cada conversa tem o potencial de transformar trajetórias e gerar negócios reais.</p>
+        <p class="about__body">Cada detalhe da noite é planejado para criar o contexto ideal ao relacionamento de alto valor: o ambiente, a curadoria dos convidados, a disposição das mesas, os speakers. Quem está aqui não veio apenas jantar — veio para conectar, posicionar e acelerar resultados.</p>
+        <ul class="about__benefits">
+          <li><i class="fa-solid fa-diamond" aria-hidden="true"></i><span>Networking qualificado com líderes e decisores</span></li>
+          <li><i class="fa-solid fa-diamond" aria-hidden="true"></i><span>Ambiente premium, exclusivo e seletivo</span></li>
+          <li><i class="fa-solid fa-diamond" aria-hidden="true"></i><span>Oportunidades de negócios e parcerias estratégicas</span></li>
+          <li><i class="fa-solid fa-diamond" aria-hidden="true"></i><span>Visibilidade e posicionamento de marca pessoal</span></li>
+          <li><i class="fa-solid fa-diamond" aria-hidden="true"></i><span>Acesso a lideranças influentes de diversos segmentos</span></li>
+        </ul>
+        <div class="about__quote">
+          <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+          <blockquote>"A diferença entre quem fecha grandes negócios e quem não fecha é simples: estar na mesa certa, com as pessoas certas, no momento certo."</blockquote>
+        </div>
+      </div>
+      <div class="about__visual reveal-right">
+        <div class="about__cards">
+          <div class="about-card about-card--main">
+            <i class="fa-solid fa-gem" aria-hidden="true"></i>
+            <h3>5ª Edição</h3>
+            <p>Cinco anos construindo o ambiente de relacionamento executivo mais exclusivo e estratégico do Brasil</p>
+          </div>
+          <div class="about-card about-card--float about-card--tl">
+            <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+            <span>Networking curado</span>
+          </div>
+          <div class="about-card about-card--float about-card--br">
+            <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+            <span>ROI mensurável</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPEAKERS -->
+  <section id="speakers" class="speakers section" aria-label="Speakers confirmados">
+    <div class="container">
+      <div class="section-hdr reveal-up">
+        <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Speakers Confirmados</div>
+        <h2 class="h2 h2--center">Vozes que moldam<br /><em>a agenda do Brasil</em></h2>
+        <p class="section-desc">Quatro lideranças de impacto nacional e internacional — governo, varejo de grande escala e mercado financeiro — para uma noite de perspectivas únicas e conversas que abrem portas.</p>
+      </div>
+      <div class="speakers__grid">
+
+        <div class="speaker-card reveal-up">
+          <div class="speaker-card__avatar speaker-card__avatar--photo">
+            <img src="images/speaker-jorge-lima.jpg" alt="Jorge Lima" loading="lazy" />
+          </div>
+          <div class="speaker-card__info">
+            <h3>Jorge Lima</h3>
+            <span class="speaker-card__role">Secretário de Desenvolvimento do Estado de São Paulo</span>
+            <ul class="speaker-card__tags">
+              <li>Governo SP</li>
+              <li>Política Econômica</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="speaker-card reveal-up" style="--delay:.08s">
+          <div class="speaker-card__avatar speaker-card__avatar--photo">
+            <img src="images/speaker-luiz-alberto.jpg" alt="Luiz Alberto Castiglioni" loading="lazy" />
+          </div>
+          <div class="speaker-card__info">
+            <h3>Luiz Alberto Castiglioni</h3>
+            <span class="speaker-card__role">Ministro da Indústria e Comércio do Paraguai · Ex-Vice-Presidente do Paraguai</span>
+            <ul class="speaker-card__tags">
+              <li>América do Sul</li>
+              <li>Comércio Internacional</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="speaker-card reveal-up" style="--delay:.16s">
+          <div class="speaker-card__avatar speaker-card__avatar--photo">
+            <img src="images/speaker-paulo-correa.jpg" alt="Paulo Correa" loading="lazy" />
+          </div>
+          <div class="speaker-card__info">
+            <h3>Paulo Correa</h3>
+            <span class="speaker-card__role">CEO da C&A</span>
+            <ul class="speaker-card__tags">
+              <li>Varejo</li>
+              <li>Liderança Executiva</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="speaker-card reveal-up" style="--delay:.24s">
+          <div class="speaker-card__avatar speaker-card__avatar--photo">
+            <img src="images/speaker-daniella-marques.jpg" alt="Daniella Marques" loading="lazy" />
+          </div>
+          <div class="speaker-card__info">
+            <h3>Daniella Marques</h3>
+            <span class="speaker-card__role">Ex-Presidente da Caixa Econômica Federal · Partner and Chairwoman da Legend Special Assets</span>
+            <ul class="speaker-card__tags">
+              <li>Mercado Financeiro</li>
+              <li>Setor Imobiliário</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIÊNCIA -->
+  <section id="experiencia" class="experience section section--dark" aria-label="Programação e experiência">
+    <div class="container">
+      <div class="section-hdr reveal-up">
+        <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>A Experiência</div>
+        <h2 class="h2 h2--center">Como cada minuto da noite<br /><em>trabalha pelo seu negócio</em></h2>
+        <p class="section-desc">A programação não é um simples cronograma. É uma sequência estratégica desenhada para maximizar conexões de alto valor.</p>
+      </div>
+      <div class="timeline">
+        <article class="tl-item reveal-up">
+          <div class="tl-time"><span>19h00</span><div class="tl-line" aria-hidden="true"></div></div>
+          <div class="tl-card">
+            <div class="tl-icon"><i class="fa-solid fa-martini-glass-citrus" aria-hidden="true"></i></div>
+            <div class="tl-body">
+              <h3>Coquetel de Boas-Vindas</h3>
+              <p>Circulação livre, apresentações informais e as primeiras conexões da noite. O ambiente foi projetado para estimular conversas de alto nível desde o primeiro momento.</p>
+            </div>
+          </div>
+        </article>
+        <article class="tl-item reveal-up" style="--delay:.08s">
+          <div class="tl-time"><span>20h00</span><div class="tl-line" aria-hidden="true"></div></div>
+          <div class="tl-card">
+            <div class="tl-icon"><i class="fa-solid fa-microphone-lines" aria-hidden="true"></i></div>
+            <div class="tl-body">
+              <h3>Início das Apresentações</h3>
+              <p>Perspectivas estratégicas de líderes como Jorge Lima, Luiz Alberto Castiglioni, Paulo Correa e Daniella Marques — conteúdo exclusivo que gera pauta para as conversas de mesa.</p>
+            </div>
+          </div>
+        </article>
+        <article class="tl-item reveal-up" style="--delay:.16s">
+          <div class="tl-time"><span>20h45</span><div class="tl-line" aria-hidden="true"></div></div>
+          <div class="tl-card">
+            <div class="tl-icon"><i class="fa-solid fa-utensils" aria-hidden="true"></i></div>
+            <div class="tl-body">
+              <h3>Jantar de Gala</h3>
+              <p>Menu de alto padrão com mesas dispostas estrategicamente para promover interações entre perfis complementáres — executivos, lideranças governamentais, investidores e decisores.</p>
+            </div>
+          </div>
+        </article>
+        <article class="tl-item reveal-up" style="--delay:.24s">
+          <div class="tl-time"><span>22h30</span><div class="tl-line" aria-hidden="true"></div></div>
+          <div class="tl-card">
+            <div class="tl-icon"><i class="fa-solid fa-wine-glass-empty" aria-hidden="true"></i></div>
+            <div class="tl-body">
+              <h3>Finalização das Apresentações</h3>
+              <p>Os últimos insights e conexões da noite. O conteúdo se transforma em conversa — e conversa, em oportunidade.</p>
+            </div>
+          </div>
+        </article>
+        <article class="tl-item reveal-up" style="--delay:.32s">
+          <div class="tl-time"><span>22h40</span><div class="tl-line" aria-hidden="true"></div></div>
+          <div class="tl-card">
+            <div class="tl-icon"><i class="fa-solid fa-door-open" aria-hidden="true"></i></div>
+            <div class="tl-body">
+              <h3>Encerramento do Evento</h3>
+              <p>Os negócios iniciados à mesa ganham desdobramentos concretos.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUEM PARTICIPA -->
+  <section id="quem-participa" class="profiles section" aria-label="Perfil dos participantes">
+    <div class="container">
+      <div class="section-hdr reveal-up">
+        <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Perfil dos Convidados</div>
+        <h2 class="h2 h2--center">Curadoria que garante<br /><em>conversas que valem negócios</em></h2>
+        <p class="section-desc">O acesso ao evento é seletivo por definição. A qualidade dos participantes é o principal ativo que entregamos a quem está na sala.</p>
+      </div>
+      <div class="profiles__grid">
+        <div class="profile-card reveal-up">
+          <div class="pc-icon"><i class="fa-solid fa-crown" aria-hidden="true"></i></div>
+          <h3>C-Levels & Diretores</h3>
+          <p>CEOs, CFOs, CMOs, CHROs, COOs e diretores executivos de empresas de médio e grande porte com poder real de decisão e orçamento.</p>
+        </div>
+        <div class="profile-card reveal-up" style="--delay:.08s">
+          <div class="pc-icon"><i class="fa-solid fa-rocket" aria-hidden="true"></i></div>
+          <h3>Fundadores & Sócios</h3>
+          <p>Empreendedores à frente de empresas em crescimento acelerado, com visão estratégica e abertura para parcerias de alto impacto.</p>
+        </div>
+        <div class="profile-card reveal-up" style="--delay:.16s">
+          <div class="pc-icon"><i class="fa-solid fa-building-columns" aria-hidden="true"></i></div>
+          <h3>Investidores & Capital</h3>
+          <p>Gestores de patrimônio, family offices, investidores-anjo e líderes de fundos com capital ativo e apetite por novas oportunidades.</p>
+        </div>
+        <div class="profile-card reveal-up" style="--delay:.24s">
+          <div class="pc-icon"><i class="fa-solid fa-handshake" aria-hidden="true"></i></div>
+          <h3>Líderes Empresariais</h3>
+          <p>Executivos e empresários com influência real nos segmentos em que atuam — de grandes corporações a negócios de nicho com relevância nacional.</p>
+        </div>
+        <div class="profile-card reveal-up" style="--delay:.32s">
+          <div class="pc-icon"><i class="fa-solid fa-landmark" aria-hidden="true"></i></div>
+          <h3>Decisores Institucionais</h3>
+          <p>Lideranças de organizações públicas e privadas, associações de classe e entidades que influenciam o ambiente de negócios no Brasil.</p>
+        </div>
+        <div class="profile-card reveal-up" style="--delay:.4s">
+          <div class="pc-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
+          <h3>Profissionais de Alto Impacto</h3>
+          <p>Especialistas, consultores sênior e líderes de áreas estratégicas que valorizam posicionamento, relacionamento e geração de negócios qualificados.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VÍDEO & PROVA SOCIAL -->
+  <section class="video-sec section--dark" aria-label="Vídeo das edições anteriores">
+    <div class="container">
+      <div class="video-sec__grid">
+
+        <!-- COLUNA ESQUERDA — DESCRITIVO -->
+        <div class="video-sec__text reveal-left">
+          <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Edições Anteriores</div>
+          <h2 class="h2">Resultados que falam<br /><em>por si mesmos</em></h2>
+          <p>Quatro edições. Centenas de conexões documentadas. Negócios que nasceram em uma conversa de jantar e se tornaram parcerias reais.</p>
+          <ul class="proof-list">
+            <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i><span>+500 executivos e líderes participaram das edições anteriores</span></li>
+            <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i><span>98% dos participantes indicam o evento para pares e parceiros de mercado</span></li>
+            <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i><span>Dezenas de parcerias estratégicas e negócios formalizados no pós-evento</span></li>
+            <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i><span>Reconhecido como um dos jantares executivos mais exclusivos do Brasil</span></li>
+          </ul>
+          <a href="#inscricao" class="btn btn--gold btn--lg" style="margin-top:28px;">
+            Reservar meu lugar
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <!-- COLUNA DIREITA — VÍDEO -->
+        <div class="video-sec__right reveal-right">
+          <div class="video-wrapper-inline" id="video-box">
+            <video controls playsinline webkit-playsinline preload="metadata">
+              <source src="https://www.genspark.ai/api/files/s/QBc8OeCk" type="video/mp4" />
+              Seu navegador não suporta vídeo HTML5.
+            </video>
+          </div>
+          <p class="video-below-caption">MFN — Jantar de Gala 2025 · 4ª Edição</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- INGRESSOS + FORMULÁRIO -->
+  <section id="inscricao" class="tickets section section--dark" aria-label="Ingressos e inscrição">
+    <div class="container">
+      <div class="section-hdr reveal-up">
+        <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Reserva de Assento</div>
+        <h2 class="h2 h2--center">Garanta sua presença<br /><em>antes que não haja mais lugar.</em></h2>
+        <p class="section-desc">Vagas limitadas. Alta procura entre executivos e decisores. Os lotes promocionais têm prazo e esgotam sem aviso.</p>
+      </div>
+
+      <!-- INGRESSO - ÚNICO CARD CENTRALIZADO -->
+      <div class="tkt-single-wrap reveal-up">
+        <div class="tkt-card tkt-card--feat tkt-card--center">
+          <div class="tkt-badge">Recomendado</div>
+          <div class="tkt-top">
+            <span class="tkt-type">Ingresso Individual</span>
+            <div class="tkt-price"><strong>Lote 1 — R$ 1.000</strong><span>por pessoa · válido até 30/04</span></div>
+          </div>
+          <ul class="tkt-list">
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Assento no jantar de gala</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Coquetel de boas-vindas</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Palestras com speakers confirmados</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Networking & encerramento</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Credencial e kit exclusivo</li>
+          </ul>
+          <button class="btn btn--gold btn--full btn--xl" id="open-register-modal" type="button">
+            Reservar meu assento
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="comunidade-banner reveal-up" style="margin-top:2rem;">
+        <div class="comunidade-banner__icon"><i class="fa-solid fa-tag" aria-hidden="true"></i></div>
+        <div>
+          <strong>Integrantes do HUB C+ / Comunidade C+:</strong>
+          <span>10% de desconto sobre o valor vigente do lote no momento da sua reserva. Informe sua condição no formulário.</span>
+        </div>
+      </div>
+
+      <!-- Trust Bar -->
+      <div class="trust-bar reveal-up">
+        <div class="trust-item"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i><span>Ambiente seguro</span></div>
+        <div class="trust-item"><i class="fa-regular fa-star" aria-hidden="true"></i><span>98% de aprovação</span></div>
+        <div class="trust-item"><i class="fa-solid fa-users" aria-hidden="true"></i><span>+500 executivos participantes</span></div>
+        <div class="trust-item"><i class="fa-regular fa-clock" aria-hidden="true"></i><span>Vagas por tempo limitado</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PATROCÍNIO JANTAR DE GALA -->
+  <section id="patrocinio" class="sponsorship section" aria-label="Patrocínio Jantar de Gala">
+    <div class="container">
+
+      <!-- INTRO — 1 COLUNA -->
+      <div class="sp-intro reveal-up">
+        <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Patrocínio Jantar de Gala</div>
+        <h2 class="h2">
+          Coloque sua marca no centro<br />da sala mais qualificada<br /><em>de São Paulo.</em>
+        </h2>
+        <p>O Patrocínio do Jantar de Gala MFN|IBREI posiciona a sua empresa como referência diante de C-Levels, fundadores, investidores e decisores em um ambiente premium, de alta receptividade e selecionado com rigor.</p>
+        <p>Não é uma logo em banner. <strong>É presença estratégica, percepção de valor e acesso real às pessoas que decidem.</strong></p>
+        <div class="sp-highlights">
+          <div class="sp-hl">
+            <div class="sp-hl__icon" aria-hidden="true"><i class="fa-solid fa-bullseye"></i></div>
+            <div><strong>Audiência de alto nível</strong><span>C-Levels, fundadores, investidores e líderes organizacionais com poder real de decisão</span></div>
+          </div>
+          <div class="sp-hl">
+            <div class="sp-hl__icon" aria-hidden="true"><i class="fa-solid fa-eye"></i></div>
+            <div><strong>Visibilidade premium de marca</strong><span>Exposição em todos os materiais, comunicações e registros do evento</span></div>
+          </div>
+          <div class="sp-hl">
+            <div class="sp-hl__icon" aria-hidden="true"><i class="fa-solid fa-handshake"></i></div>
+            <div><strong>Relacionamento e negócios</strong><span>Acesso presencial e legitimado a uma rede executiva de alta qualificação</span></div>
+          </div>
+        </div>
+        <button class="btn btn--gold btn--lg" id="open-sponsor-modal" type="button">
+          Quero conhecer as cotas de patrocínio
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <!-- COTAS LADO A LADO -->
+      <div class="sp-cotas-grid">
+
+        <!-- PATROCÍNIO JANTAR DE GALA -->
+        <div class="sp-pkg-card reveal-up">
+          <div class="sp-pkg-header">
+            <div class="sp-medal" aria-hidden="true"><i class="fa-solid fa-medal"></i></div>
+            <h3>Patrocínio <em>Jantar de Gala 2026</em></h3>
+            <div class="sp-price">
+              <span>Investimento</span>
+              <strong>R$ 15.000</strong>
+            </div>
+          </div>
+          <div class="sp-pkg-divider"></div>
+          <ul class="sp-pkg-list">
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Logo no backdrop oficial do evento</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>4 assentos VIP Executivo inclusos</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Exposição da marca em todos os materiais do evento</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Veiculação de vídeo institucional de até 1 minuto para apresentação da empresa</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Entrevista exclusiva durante o jantar para divulgação</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Convite para participar de um dos episódios do MFN TALKS</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Relatório pós-evento completo dos convidados (respeitando a LGPD)</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Prioridade na próxima edição</li>
+          </ul>
+          <div class="sp-urgency">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+            <span>Apenas <strong>3 cotas</strong> disponíveis. <strong>1 já foi reservada.</strong></span>
+          </div>
+          <button class="btn btn--gold btn--full" type="button" data-modal-cota="Patrocínio Jantar de Gala 2026 — R$ 15.000" onclick="openSponsorModal(this)">
+            Solicitar informações de patrocínio
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <!-- APOIADOR JANTAR DE GALA -->
+        <div class="sp-pkg-card sp-pkg-card--apoiador reveal-up" style="--delay:.12s">
+          <div class="sp-pkg-header">
+            <div class="sp-medal sp-medal--apoiador" aria-hidden="true"><i class="fa-solid fa-star"></i></div>
+            <h3>Apoiador <em>Jantar de Gala 2026</em></h3>
+            <div class="sp-price">
+              <span>Investimento</span>
+              <small class="sp-price__from">A partir de</small>
+              <strong>R$ 3.000</strong>
+            </div>
+          </div>
+          <div class="sp-pkg-divider"></div>
+          <ul class="sp-pkg-list">
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Logo no backdrop oficial do evento</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>1 assento VIP Executivo incluso</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Menção nas comunicações digitais</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Logo no programa oficial da noite</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>10% de desconto na compra dos convites</li>
+          </ul>
+          <div class="sp-urgency">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+            <span>Vagas de apoiador <strong>limitadas.</strong> Reserve a sua.</span>
+          </div>
+          <button class="btn btn--outline-gold btn--full" type="button" data-modal-cota="Apoiador Jantar de Gala 2026 — A partir de R$ 3.000" onclick="openSponsorModal(this)">
+            Solicitar informações de patrocínio
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- REALIZADORES -->
+  <section class="organizers section" aria-label="Organização do evento">
+    <div class="container">
+      <div class="section-hdr reveal-up">
+        <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Realização</div>
+        <h2 class="h2 h2--center">Quem está por trás<br /><em>dessa edição</em></h2>
+      </div>
+      <div class="org-grid">
+
+        <!-- MFN -->
+        <div class="org-card reveal-up">
+          <div class="org-photo-wrap">
+            <img src="images/realizador-gislaine-toth.jpg" alt="Gislaine Toth" loading="lazy" class="org-photo" />
+            <div class="org-photo-badge">MFN</div>
+          </div>
+          <div class="org-person">
+            <div class="org-person__info">
+              <strong>Gislaine Toth</strong>
+              <span>Conselheira, mentora, C-Level, Head da Unidade de Negócios — Teka e CEO do Hub MFN</span>
+            </div>
+          </div>
+          <p>O MFN é uma comunidade formada por mulheres e homens em posições de liderança: C-Level, Executivos, Empresários e Líderes. Nosso propósito é acelerar negócios e carreiras através de conexões estratégicas e acessos a profissionais e empresas, gerando oportunidades reais. Atuamos em diversos setores da economia, e o HUB é reconhecido como um ecossistema de networking e negócios muito consolidado.</p>
+        </div>
+
+        <!-- IBREI -->
+        <div class="org-card reveal-up" style="--delay:.12s">
+          <div class="org-photo-wrap">
+            <img src="images/realizador-mauricio-prazak.jpg" alt="Maurício Prazak" loading="lazy" class="org-photo" />
+            <div class="org-photo-badge">IBREI</div>
+          </div>
+          <div class="org-person">
+            <div class="org-person__info">
+              <strong>Maurício Prazak</strong>
+              <span>Presidente do IBREI · Sócio Fundador do Escritório Benassi Cepêra – Prazak Advogados · Conselheiro e professor</span>
+            </div>
+          </div>
+          <p>IBREI — Instituto Brasileiro de Desenvolvimento de Relações Empresariais. O IBREI é uma ponte estratégica entre profissionais, empresas e instituições públicas e privadas para fortalecer o ambiente de negócios no Brasil e no exterior. Atua na facilitação de relações internacionais, na promoção da imagem do país e no acesso a informações qualificadas sobre mercados globais.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq section section--dark" aria-label="Perguntas frequentes">
+    <div class="container faq__inner">
+      <div class="section-hdr reveal-up">
+        <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Dúvidas Frequentes</div>
+        <h2 class="h2 h2--center">Tudo que você precisa saber<br /><em>antes de reservar seu assento</em></h2>
+      </div>
+      <div class="faq__list">
+        <div class="faq__item reveal-up">
+          <button class="faq__q" aria-expanded="false">
+            <span>Quem pode participar do evento?</span>
+            <i class="fa-solid fa-plus" aria-hidden="true"></i>
+          </button>
+          <div class="faq__a"><p>O Jantar de Gala MFN|IBREI é voltado para C-Levels (CEOs, CFOs, CMOs, CHROs, COOs), fundadores, sócios, investidores, executivos sênior, empreendedores e líderes organizacionais que valorizam relacionamento estratégico, posicionamento e geração de negócios qualificados. O ambiente é premium e seletivo por definição — as vagas são limitadas e confirmadas mediante pagamento.</p></div>
+        </div>
+        <div class="faq__item reveal-up" style="--delay:.05s">
+          <button class="faq__q" aria-expanded="false">
+            <span>Como funciona o processo após a solicitação de reserva?</span>
+            <i class="fa-solid fa-plus" aria-hidden="true"></i>
+          </button>
+          <div class="faq__a"><p>Após o preenchimento do formulário, escolha a forma de pagamento de sua preferência. A vaga é confirmada mediante envio do comprovante de pagamento para a equipe MFN|IBREI.</p></div>
+        </div>
+        <div class="faq__item reveal-up" style="--delay:.1s">
+          <button class="faq__q" aria-expanded="false">
+            <span>O evento tem dress code?</span>
+            <i class="fa-solid fa-plus" aria-hidden="true"></i>
+          </button>
+          <div class="faq__a"><p>Sim. O Jantar de Gala MFN|IBREI tem dress code black tie ou traje passeio completo. O ambiente premium é um reflexo do nível dos participantes, e a vestimenta faz parte dessa experiência.</p></div>
+        </div>
+        <div class="faq__item reveal-up" style="--delay:.15s">
+          <button class="faq__q" aria-expanded="false">
+            <span>Qual é a política de cancelamento?</span>
+            <i class="fa-solid fa-plus" aria-hidden="true"></i>
+          </button>
+          <div class="faq__a"><p>Em caso de impossibilidade de comparecimento, não é possível transferir o ingresso para outra pessoa. Os cancelamentos devem ser realizados com até 30 dias de antecedência em relação à data do evento.</p></div>
+        </div>
+        <div class="faq__item reveal-up" style="--delay:.2s">
+          <button class="faq__q" aria-expanded="false">
+            <span>Qual o desconto para integrantes do HUB C+ / Comunidade C+?</span>
+            <i class="fa-solid fa-plus" aria-hidden="true"></i>
+          </button>
+          <div class="faq__a"><p>Integrantes do HUB C+ e da Comunidade C+ têm 10% de desconto sobre o valor vigente do lote no momento da reserva. Para aplicar o desconto, basta informar sua condição no formulário de inscrição. Nossa equipe aplicará o desconto e enviará o valor atualizado para pagamento.</p></div>
+        </div>
+        <div class="faq__item reveal-up" style="--delay:.3s">
+          <button class="faq__q" aria-expanded="false">
+            <span>Como faço o pagamento via PIX?</span>
+            <i class="fa-solid fa-plus" aria-hidden="true"></i>
+          </button>
+          <div class="faq__a"><p>Realize a transferência via PIX para o CNPJ <strong>45.933.549/0001-77</strong> com o valor do lote vigente na data do pagamento. Após a transferência, envie o comprovante para a equipe MFN|IBREI confirmar e reservar seu assento. Lembre-se: a vaga só é garantida após a confirmação do pagamento.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="final-cta" aria-label="Chamada final">
+    <div class="final-cta__bg" aria-hidden="true"></div>
+    <div class="container final-cta__body reveal-up">
+      <div class="eyebrow eyebrow--light"><span class="eyebrow-dot" aria-hidden="true"></span>08 de Junho de 2026 · São Paulo, SP</div>
+      <h2 class="final-cta__h">
+        A mesa que pode mudar<br />seu próximo ano <em>está aqui.</em>
+      </h2>
+      <p class="final-cta__sub">Você pode passar mais um ano prospectando pelos canais de sempre — ou pode estar naquela sala com as 200 pessoas certas. A escolha é sua.</p>
+      <div class="final-cta__acts">
+        <a href="#inscricao" class="btn btn--gold btn--xl">Quero garantir meu assento <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        <a href="#patrocinio" class="btn btn--ghost-light btn--xl">Conhecer as cotas de patrocínio</a>
+      </div>
+      <p class="final-cta__note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Lote 1 válido até <strong>30/04 — R$ 1.000</strong>. Vagas encerradas sem aviso prévio.</p>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="contact-sec section" aria-label="Contato">
+    <div class="container">
+      <div class="contact-inner reveal-up">
+        <div class="contact-text">
+          <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Contato</div>
+          <h2 class="h2">Fale com a<br /><em>equipe MFN | IBREI</em></h2>
+          <p>Dúvidas sobre inscrição, patrocínio ou qualquer informação sobre o evento? Nossa equipe está à disposição para atendê-lo com atenção e agilidade.</p>
+        </div>
+        <div class="contact-details">
+          <a href="mailto:ella@grupomfn.com.br" class="contact-item">
+            <div class="contact-item__icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></div>
+            <div class="contact-item__body">
+              <span>E-mail</span>
+              <strong>ella@grupomfn.com.br</strong>
+            </div>
+          </a>
+          <a href="https://wa.me/5511978262518" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <div class="contact-item__icon" aria-hidden="true"><i class="fa-brands fa-whatsapp"></i></div>
+            <div class="contact-item__body">
+              <span>WhatsApp</span>
+              <strong>(11) 97826-2518</strong>
+            </div>
+          </a>
+          <div class="contact-item">
+            <div class="contact-item__icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="contact-item__body">
+              <span>Local &amp; Data</span>
+              <strong>São Paulo, SP · 08 de Junho de 2026</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="images/logo-mfn.png" alt="Logo MFN" class="footer__logo-img" />
+          <span class="brand-sep">|</span>
+          <span class="brand-ibrei">IBREI</span>
+        </div>
+        <p>5ª Edição do Jantar de Gala<br />MFN | IBREI · São Paulo, 2026</p>
+        <div class="footer__socials">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://wa.me/5511978262518" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer__nav">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#sobre">O Evento</a></li>
+          <li><a href="#experiencia">Programação</a></li>
+          <li><a href="#quem-participa">Perfil dos Convidados</a></li>
+          <li><a href="#inscricao">Inscrição</a></li>
+          <li><a href="#patrocinio">Patrocínio</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer__nav">
+        <h4>Informações</h4>
+        <ul>
+          <li><a href="#">Política de Privacidade</a></li>
+          <li><a href="#">Termos de Participação</a></li>
+          <li><a href="#">Política de Cancelamento</a></li>
+          <li><a href="#">Imprensa</a></li>
+        </ul>
+      </div>
+      <div class="footer__contact">
+        <h4>Contato</h4>
+        <p><i class="fa-solid fa-envelope" aria-hidden="true"></i>ella@grupomfn.com.br</p>
+        <p><i class="fa-brands fa-whatsapp" aria-hidden="true"></i>(11) 97826-2518</p>
+        <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i>São Paulo, SP<br />08 de Junho de 2026<br />19h00 às 22h40</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>© 2026 MFN | IBREI. Todos os direitos reservados.</p>
+        <p>Cinco edições construindo o relacionamento executivo mais relevante do Brasil.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-top" class="back-top" aria-label="Voltar ao topo">
+    <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- ══════════════════════════════════════════════
+       MODAL — RESERVA DE ASSENTO (3 etapas)
+  ══════════════════════════════════════════════ -->
+  <div id="modal-register" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-reg-title" hidden>
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Fechar" id="close-register-modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- ETAPA 1 — DADOS PESSOAIS -->
+      <div class="modal-step" id="reg-step-1">
+        <div class="modal-step-ind"><span class="active">1</span><span class="line"></span><span>2</span><span class="line"></span><span>3</span></div>
+        <h3 class="modal-title" id="modal-reg-title">Reservar meu assento</h3>
+        <p class="modal-sub">Lote 1 &mdash; R$ 1.000 · válido até 30/04</p>
+        <form id="reg-form-step1" novalidate>
+          <div class="form-group">
+            <label for="m-name">Nome completo *</label>
+            <input type="text" id="m-name" name="name" placeholder="Seu nome completo" required />
+          </div>
+          <div class="form-group">
+            <label for="m-email">E-mail *</label>
+            <input type="email" id="m-email" name="email" placeholder="nome@empresa.com.br" required />
+          </div>
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="m-phone">WhatsApp *</label>
+              <input type="tel" id="m-phone" name="phone" placeholder="(11) 99999-0000" required />
+            </div>
+            <div class="form-group">
+              <label for="m-company">Empresa *</label>
+              <input type="text" id="m-company" name="company" placeholder="Nome da empresa" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="m-role">Cargo / Função *</label>
+            <input type="text" id="m-role" name="role" placeholder="Ex: Diretor Comercial" required />
+          </div>
+          <div class="form-group">
+            <label for="m-comunidade">Integrante do HUB C+ / Comunidade C+?</label>
+            <select id="m-comunidade" name="comunidade">
+              <option value="nao" selected>Não</option>
+              <option value="sim">Sim — quero aplicar 10% de desconto</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn--gold btn--full btn--xl">
+            Continuar <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- ETAPA 2 — FORMA DE PAGAMENTO -->
+      <div class="modal-step hidden" id="reg-step-2">
+        <div class="modal-step-ind"><span class="done">✓</span><span class="line active-line"></span><span class="active">2</span><span class="line"></span><span>3</span></div>
+        <h3 class="modal-title">Forma de pagamento</h3>
+        <p class="modal-sub">Escolha como deseja pagar sua vaga</p>
+        <div class="pay-options">
+          <button class="pay-opt" id="pay-pix" type="button">
+            <i class="fa-brands fa-pix"></i>
+            <span>PIX</span>
+          </button>
+          <button class="pay-opt" id="pay-card" type="button">
+            <i class="fa-solid fa-credit-card"></i>
+            <span>Cartão de Crédito</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ETAPA 3A — PIX -->
+      <div class="modal-step hidden" id="reg-step-pix">
+        <div class="modal-step-ind"><span class="done">✓</span><span class="line active-line"></span><span class="done">✓</span><span class="line active-line"></span><span class="active">3</span></div>
+        <h3 class="modal-title">Pague via PIX</h3>
+        <p class="modal-sub">Transfira o valor e envie o comprovante abaixo</p>
+        <div class="pix-info-box">
+          <p class="pix-info-label">Chave PIX (CNPJ):</p>
+          <div class="pix-key-display" id="modal-pix-key">45.933.549/0001-77</div>
+          <button class="btn btn--outline btn--full" id="modal-copy-pix" type="button">
+            <i class="fa-regular fa-copy"></i> <span id="modal-copy-text">Copiar chave PIX</span>
+          </button>
+          <p class="pix-note">Valor: <strong>R$ 1.000</strong> (Lote 1 · até 30/04)</p>
+        </div>
+        <div class="pix-divider"><span>Após pagar, envie o comprovante</span></div>
+        <div class="pix-wa-send">
+          <p class="pix-wa-info"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Após realizar o pagamento, envie o comprovante via WhatsApp tocando no botão abaixo. Nossa equipe confirmará sua vaga em até 24h.</p>
+          <a id="pix-wa-btn"
+             href="https://wa.me/5511992075511?text=Ol%C3%A1%2C%20realizei%20meu%20pagamento%20e%20encaminho%20em%20anexo%20o%20comprovante"
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn--gold btn--full btn--xl">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            Enviar comprovante via WhatsApp
+          </a>
+          <p class="pix-wa-note">O link abrirá o WhatsApp com a mensagem pré-preenchida. Basta anexar o comprovante e enviar.</p>
+        </div>
+      </div>
+
+      <!-- ETAPA 3B — CARTÃO (uTicket) -->
+      <div class="modal-step hidden" id="reg-step-card">
+        <div class="modal-step-ind"><span class="done">✓</span><span class="line active-line"></span><span class="done">✓</span><span class="line active-line"></span><span class="active">3</span></div>
+        <h3 class="modal-title">Pagar com Cartão de Crédito</h3>
+        <p class="modal-sub">Você será redirecionado para o ambiente seguro do uTicket</p>
+        <div class="uticket-box">
+          <i class="fa-solid fa-shield-halved"></i>
+          <p>Pagamento processado pelo <strong>uTicket</strong> — plataforma oficial de ingressos, ambiente 100% seguro.</p>
+          <a href="https://uticket.com.br/evento/jantar-de-gala-2026-mfn-ibrei/01LX7V447ZJ9YG" target="_blank" rel="noopener noreferrer" class="btn btn--gold btn--full btn--xl" id="uticket-btn">
+            Comprar agora no uTicket
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="uticket-divider"><span>Já pagou no uTicket?</span></div>
+        <div class="pix-wa-send">
+          <p class="pix-wa-info"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Após a confirmação do pagamento no uTicket, envie o comprovante via WhatsApp para agilizarmos a sua confirmação de vaga.</p>
+          <a id="card-wa-btn"
+             href="https://wa.me/5511992075511?text=Ol%C3%A1%2C%20realizei%20meu%20pagamento%20e%20encaminho%20em%20anexo%20o%20comprovante"
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn--gold btn--full btn--xl">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            Enviar comprovante via WhatsApp
+          </a>
+          <p class="pix-wa-note">O link abrirá o WhatsApp com a mensagem pré-preenchida. Basta anexar o comprovante e enviar.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       MODAL — PATROCÍNIO (formulário + mensagem)
+  ══════════════════════════════════════════════ -->
+  <div id="modal-sponsor" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-sp-title" hidden>
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Fechar" id="close-sponsor-modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- FORMULÁRIO -->
+      <div id="sp-modal-form">
+        <h3 class="modal-title" id="modal-sp-title">Solicitar informações de patrocínio</h3>
+        <p class="modal-sub" id="sp-modal-cota-label"></p>
+        <p class="modal-desc">Preencha o formulário e nossa equipe comercial entrará em contato em até 24 horas com o dossiê completo de patrocínio.</p>
+        <form id="sponsor-modal-form" novalidate>
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="spm-name">Nome *</label>
+              <input type="text" id="spm-name" name="name" placeholder="Seu nome" required />
+            </div>
+            <div class="form-group">
+              <label for="spm-company">Empresa *</label>
+              <input type="text" id="spm-company" name="company" placeholder="Nome da empresa" required />
+            </div>
+          </div>
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="spm-email">E-mail *</label>
+              <input type="email" id="spm-email" name="email" placeholder="nome@empresa.com.br" required />
+            </div>
+            <div class="form-group">
+              <label for="spm-phone">WhatsApp *</label>
+              <input type="tel" id="spm-phone" name="phone" placeholder="(11) 99999-0000" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="spm-msg">Sobre sua empresa e interesse</label>
+            <textarea id="spm-msg" name="message" rows="3" placeholder="Conte-nos sobre sua empresa e o que espera do patrocínio..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--gold btn--full btn--xl" id="spm-submit">
+            <span id="spm-btn-text">Solicitar informações de patrocínio</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- MENSAGEM DE SUCESSO -->
+      <div id="sp-modal-success" class="sp-success-screen hidden">
+        <div class="sp-success-icon"><i class="fa-solid fa-circle-check"></i></div>
+        <h3>Solicitação enviada com sucesso!</h3>
+        <p>Nossa equipe comercial analisará o seu interesse e entrará em contato em até <strong>24 horas</strong> com o dossiê completo de patrocínio e as condições da cota selecionada.</p>
+        <p class="sp-success-note">Fique de olho no e-mail e WhatsApp cadastrados. Será um prazer tê-los como parceiros do Jantar de Gala MFN|IBREI.</p>
+        <button class="btn btn--gold btn--full" onclick="document.getElementById('modal-sponsor').hidden=true;document.body.style.overflow='';">
+          Fechar <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Fallback para imagens que não carregam: exibe ícone premium
+    document.querySelectorAll('.speaker-card__avatar--photo img, .org-avatar--photo img').forEach(img => {
+      img.addEventListener('error', function () {
+        const wrapper = this.closest('.speaker-card__avatar--photo, .org-avatar--photo');
+        if (!wrapper) return;
+        this.remove();
+        const isOrg = wrapper.classList.contains('org-avatar--photo');
+        wrapper.classList.remove('speaker-card__avatar--photo', 'org-avatar--photo');
+        if (!isOrg) {
+          wrapper.innerHTML = '<i class="fa-solid fa-user-tie" aria-hidden="true" style="font-size:4rem;color:rgba(233,90,42,.22)"></i>';
+        } else {
+          wrapper.innerHTML = '<i class="fa-solid fa-user-tie" aria-hidden="true"></i>';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
