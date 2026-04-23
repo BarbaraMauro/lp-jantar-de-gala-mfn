@@ -19,7 +19,7 @@
              (GET /v3/products)
 ───────────────────────────────────────────────────────*/
 const AGENDOR_CONFIG = {
-  token:          'SEU_TOKEN_AGENDOR_AQUI',   // ← substitua pelo seu API Token
+  token:          '55eda00a-2b23-445c-8673-ec6333f5bfc1',   // ← substitua pelo seu API Token
   funnelId:       0,   // ← ID do Funil SDR
   stageId:        0,   // ← ID da etapa "Lead Novo"
   products: {
