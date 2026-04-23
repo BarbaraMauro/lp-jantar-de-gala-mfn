@@ -1,4 +1,4 @@
-/* ══════════════════════════════════════════════════════
+0/* ══════════════════════════════════════════════════════
    AGENDOR CRM — Integração de Leads
    Jantar de Gala MFN | IBREI — 5ª Edição
 
@@ -48,7 +48,7 @@ function agendorHeaders() {
  */
 function agendorConfigured() {
   return (
-    AGENDOR_CONFIG.token   !== 'SEU_TOKEN_AGENDOR_AQUI' &&
+    AGENDOR_CONFIG.token   !== '55eda00a-2b23-445c-8673-ec6333f5bfc1' &&
     AGENDOR_CONFIG.token   !== '' &&
     AGENDOR_CONFIG.funnelId > 0 &&
     AGENDOR_CONFIG.stageId  > 0
