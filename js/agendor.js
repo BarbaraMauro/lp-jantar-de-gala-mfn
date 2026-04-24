@@ -34,7 +34,7 @@ async function sendLeadToAgendor(leadData, dealKey) {
     email:    leadData.email   || '',
     whatsapp: leadData.phone   || '',
     cargo:    leadData.role    || '',
-    empresa:  leadData.organization || '',
+    empresa:  leadData.company || '',
     negocio_titulo:  product.name + ' — ' + leadData.name,
     negocio_valor:   product.value,
     negocio_produto: product.name,
