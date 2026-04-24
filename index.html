@@ -958,5 +958,32 @@
       });
     });
   </script>
+  <script>
+document.getElementById("reg-form-step1").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const payload = {
+    nome: document.getElementById("m-name").value,
+    email: document.getElementById("m-email").value,
+    telefone: document.getElementById("m-phone").value,
+    empresa: document.getElementById("m-company").value,
+    cargo: document.getElementById("m-role").value,
+    comunidade: document.getElementById("m-comunidade").value,
+    produto: "Jantar de Gala"
+  };
+
+  await fetch("https://hook.us2.make.com/a1l472inhz95k294uh18u2prp1n2q2r5", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(payload)
+  });
+
+  // mantém seu fluxo atual do modal
+  document.getElementById("reg-step-1").classList.add("hidden");
+  document.getElementById("reg-step-2").classList.remove("hidden");
+});
+</script>
 </body>
 </html>
