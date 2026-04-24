@@ -6,6 +6,11 @@
 'use strict';
 
 /* ─── CONSTANTS ─────────────────────────────────────── */
+const AGENDOR_PRODUCTS = {
+  ingresso:   { name: 'Jantar de Gala',             value: 1000  },
+  patrocinio: { name: 'Patrocínio Prata',           value: 15000 },
+  apoiador:   { name: 'Apoiador 3k Jantar de Gala', value: 3000  },
+};
 const EVENT_DATE = new Date('2026-06-08T19:00:00-03:00');
 
 /* ─── DOM HELPERS ───────────────────────────────────── */
@@ -325,6 +330,9 @@ if (registerForm) {
           phone:   payload.phone,
           company: payload.company,
           role:    payload.role,
+          produto: produto.name,
+          valor: produto.value,
+          origem: "LP GitHub"
         },
         'ingresso'  // → produto: Jantar de Gala | valor: R$ 1.000
       );
@@ -376,6 +384,25 @@ if (sponsorForm) {
         body:    JSON.stringify(payload),
       });
     } catch (_) {}
+
+     if (window.AgendorCRM) {
+  const produto = AGENDOR_PRODUCTS['patrocinio'];
+
+  window.AgendorCRM.sendLead(
+    {
+      name:    payload.name,
+      email:   payload.email,
+      phone:   payload.phone,
+      company: payload.company,
+      role:    '',
+      produto: produto.name,
+      valor:   produto.value,
+      origem:  "LP GitHub",
+      mensagem: payload.message
+    },
+    'patrocinio'
+  );
+}
 
     submitBtn.classList.add('hidden');
     $('#sponsor-success').classList.remove('hidden');
@@ -577,21 +604,22 @@ if (regStep1Form) {
     } catch (_) {}
 
     // ── Agendor CRM: enviar lead de ingresso (fire-and-forget) ──
-    if (window.AgendorCRM) {
-      window.AgendorCRM.sendLead(
-        {
-          name:    _leadName,
-          email:   _leadEmail,
-          phone:   _leadPhone,
-          company: _leadCompany,
-          role:    _leadRole,
-        },
-        'ingresso'
-      );
-    }
+   if (window.AgendorCRM) {
+  const produto = AGENDOR_PRODUCTS['ingresso'];
 
-    showRegStep('reg-step-2');
-  });
+  window.AgendorCRM.sendLead(
+    {
+      name:    _leadName,
+      email:   _leadEmail,
+      phone:   _leadPhone,
+      company: _leadCompany,
+      role:    _leadRole,
+      produto: produto.name,
+      valor:   produto.value,
+      origem:  "LP GitHub"
+    },
+    'ingresso'
+  );
 }
 
 // STEP 2 — escolha de pagamento
@@ -791,8 +819,8 @@ if (sponsorModalForm) {
       // Identifica a cota pelo texto preenchido no label da modal
       // "Patrocínio Jantar de Gala 2026 — R$ 15.000"  → chave 'patrocinio'
       // "Apoiador Jantar de Gala 2026 — A partir de R$ 3.000" → chave 'apoiador'
-      const dealKey = cota.toLowerCase().includes('apoiador') ? 'apoiador' : 'patrocinio';
-
+       const dealKey = cota.toLowerCase().includes('apoiador') ? 'apoiador' : 'patrocinio';
+       const produto = AGENDOR_PRODUCTS[dealKey];
       window.AgendorCRM.sendLead(
         {
           name:    name,
@@ -800,6 +828,11 @@ if (sponsorModalForm) {
           phone:   phone,
           company: company,
           role:    '',           // campo não existe no formulário de patrocínio
+         produto: produto.name,
+         valor:   produto.value,
+         origem:  "LP GitHub",
+         mensagem: message,
+         cota: cota
         },
         dealKey
       );
