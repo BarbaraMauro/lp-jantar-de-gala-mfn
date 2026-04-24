@@ -30,11 +30,11 @@ async function sendLeadToAgendor(leadData, dealKey) {
   if (!product) { console.warn('[Agendor] Produto inválido:', dealKey); return; }
 
   const payload = {
-    pessoa_nome:     leadData.name    || '',
-    pessoa_email:    leadData.email   || '',
-    pessoa_whatsapp: leadData.phone   || '',
-    pessoa_cargo:    leadData.role    || '',
-    pessoa_empresa:  leadData.company || '',
+    nome:     leadData.name    || '',
+    email:    leadData.email   || '',
+    whatsapp: leadData.phone   || '',
+    cargo:    leadData.role    || '',
+    empresa:  leadData.company || '',
     negocio_titulo:  product.name + ' — ' + leadData.name,
     negocio_valor:   product.value,
     negocio_produto: product.name,
